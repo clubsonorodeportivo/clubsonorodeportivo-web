@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aproximaciones subacuáticas</title>
+    <link rel="canonical" href="./aproximaciones-subacuaticas.html">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
@@ -17,7 +18,7 @@
 
     <!-- Mobile top bar -->
     <div class="topbar">
-        <span class="topbar-title">Aproximaciones subacuáticas</span>
+        <a class="topbar-title" href="./aproximaciones-subacuaticas.html">Aproximaciones subacuáticas</a>
         <button class="hamburger" id="menuToggle" aria-label="Menú">
             <span></span><span></span><span></span>
         </button>
@@ -27,33 +28,54 @@
 
         <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
-            <p class="sidebar-title">APROXIMACIONES SUBACUÁTICAS</p>
+            <p class="sidebar-title"><a href="./aproximaciones-subacuaticas.html" target="_blank">APROXIMACIONES
+                    SUBACUÁTICAS</a></p>
             <ul class="sidebar-nav">
-                <li><a href="./aproximaciones-subacuaticas/about.html">ABOUT</a></li>
-                <li><a href="#proceso">PROCESO</a></li>
-                <li><a href="#publicacion">PUBLICACIÓN</a></li>
+                <li><a href="./aproximaciones-subacuaticas/proyecto.html">PROYECTO</a></li>
+                <li><a href="./aproximaciones-subacuaticas/proceso.html">PROCESO</a></li>
+                <li><a href="./aproximaciones-subacuaticas/publicacion.html">PUBLICACIÓN</a></li>
                 <li class="has-submenu">
                     <a href="#metafora" class="submenu-toggle">NADA COMO UNA<br>METÁFORA</a>
                     <ul class="submenu">
-                        <li><a href="#metafora-1">Submenu 1</a></li>
-                        <li><a href="#metafora-2">Submenu 2</a></li>
-                        <li><a href="#metafora-3">Submenu 3</a></li>
+                        <li><a href="./aproximaciones-subacuaticas/album-en-vivo.html">Álbum en vivo</a></li>
+                        <li><a href="./aproximaciones-subacuaticas/album-de-remixes.html">Álbum de remixes</a></li>
+                        <li><a href="./aproximaciones-subacuaticas/video.html">Video</a></li>
                     </ul>
                 </li>
             </ul>
         </aside>
 
         <!-- Main content -->
-                <main class="content-area">
+        <main class="content-area">
             <div class="video-wrapper">
                 <div class="video-ratio">
                     <iframe
                         src="https://player.vimeo.com/video/1170076973?autoplay=1&muted=0&loop=1&byline=0&portrait=0&title=0"
                         frameborder="0"
                         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        title="Llluvia Metropolitana (2026)">
+                        referrerpolicy="strict-origin-when-cross-origin" title="Aproximaciones subacuáticas - Teaser">
                     </iframe>
+                </div>
+            </div>
+
+            <!-- Project info section -->
+            <div class="project-info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Aproximaciones subacuáticas</h1>
+                            <p class="project-description">
+                                Descripción del proyecto. Aquí puedes escribir sobre la obra, 
+                                sus objetivos, contexto y significado.
+                            </p>
+                            <h3>Colaboradores</h3>
+                            <ul class="collaborators-list">
+                                <li>Nombre del colaborador 1</li>
+                                <li>Nombre del colaborador 2</li>
+                                <li>Nombre del colaborador 3</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -62,34 +84,8 @@
 
     <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        const toggle = document.getElementById('menuToggle');
-        const sidebar = document.getElementById('sidebar');
+    <script src="./js/main.js"></script>
 
-        toggle.addEventListener('click', () => {
-            sidebar.classList.toggle('open');
-            toggle.classList.toggle('open');
-        });
-
-        sidebar.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                sidebar.classList.remove('open');
-                toggle.classList.remove('open');
-            });
-        });
-
-        // Submenu toggle
-        const submenuToggle = document.querySelector('.submenu-toggle');
-        const submenu = document.querySelector('.submenu');
-
-        if (submenuToggle && submenu) {
-            submenuToggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                submenu.classList.toggle('open');
-            });
-        }
-    </script>
 </body>
 
 </html>
