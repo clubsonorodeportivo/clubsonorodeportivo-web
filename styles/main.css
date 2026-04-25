@@ -477,6 +477,129 @@ a {
   filter: brightness(0.88);
 }
 
+#proyecto .project-mosaic-gallery {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 1.75rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-flow: dense;
+  gap: 0;
+}
+
+#proyecto .project-mosaic-gallery .gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  grid-column: span 3;
+  aspect-ratio: 3 / 4;
+}
+
+#proyecto .project-mosaic-gallery .gallery-img.tile-h {
+  grid-column: span 6;
+  aspect-ratio: 4 / 3;
+}
+
+#publicacion .publication-mosaic-gallery {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 1.75rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-flow: dense;
+  gap: 0;
+}
+
+#publicacion .publication-mosaic-gallery .gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  grid-column: span 3;
+  aspect-ratio: 3 / 4;
+}
+
+#publicacion .publication-mosaic-gallery .gallery-img.tile-h {
+  grid-column: span 6;
+  aspect-ratio: 4 / 3;
+}
+
+#metafora .metafora-mosaic-gallery {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 1.75rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-flow: dense;
+  gap: 0;
+}
+
+#metafora .metafora-mosaic-gallery .gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  grid-column: span 3;
+  aspect-ratio: 3 / 4;
+}
+
+#metafora .metafora-mosaic-gallery .gallery-img.tile-h {
+  grid-column: span 6;
+  aspect-ratio: 4 / 3;
+}
+
+.metafora-page .content-area-info {
+  scroll-snap-type: y proximity;
+}
+
+#metafora {
+  max-width: 960px;
+}
+
+#metafora .metafora-panel {
+  min-height: 88vh;
+  padding-bottom: 10vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#metafora .metafora-panel > h2 {
+  margin-bottom: 1rem;
+}
+
+#metafora .metafora-panel-video .metafora-video-stage {
+  width: 100%;
+  max-width: none;
+  height: min(72vh, calc(100vh - 240px));
+  margin-bottom: 1.25rem;
+}
+
+#metafora .metafora-panel-album .metafora-album-layout {
+  flex: 1;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#metafora .metafora-panel-album .thumbnail {
+  aspect-ratio: 4 / 5;
+}
+
+#metafora .metafora-panel-mosaic {
+  min-height: 92vh;
+}
+
 /* Proceso: masonry compacta sin recortes */
 #proceso .process-gallery {
   display: block;
@@ -675,6 +798,39 @@ a {
     padding: 1.8rem;
   }
 
+  #proyecto .project-mosaic-gallery {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  #publicacion .publication-mosaic-gallery {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  #metafora .metafora-mosaic-gallery {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  #metafora .metafora-panel {
+    min-height: 82vh;
+    padding-bottom: 8vh;
+  }
+
+  #metafora .metafora-panel-video .metafora-video-stage {
+    height: min(64vh, calc(100vh - 220px));
+  }
+
+  #proyecto .project-mosaic-gallery .gallery-img,
+  #publicacion .publication-mosaic-gallery .gallery-img,
+  #metafora .metafora-mosaic-gallery .gallery-img {
+    grid-column: span 4;
+  }
+
+  #proyecto .project-mosaic-gallery .gallery-img.tile-h,
+  #publicacion .publication-mosaic-gallery .gallery-img.tile-h,
+  #metafora .metafora-mosaic-gallery .gallery-img.tile-h {
+    grid-column: span 8;
+  }
+
   .mosaic,
   .image-gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -725,5 +881,35 @@ a {
 
   #proceso .process-gallery {
     column-count: 1;
+  }
+
+  #proyecto .project-mosaic-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #publicacion .publication-mosaic-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #metafora .metafora-mosaic-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #metafora .metafora-panel {
+    min-height: auto;
+    padding-bottom: 2.4rem;
+  }
+
+  #metafora .metafora-panel-video .metafora-video-stage {
+    height: min(56vh, calc(100vh - 190px));
+  }
+
+  #proyecto .project-mosaic-gallery .gallery-img,
+  #publicacion .publication-mosaic-gallery .gallery-img,
+  #metafora .metafora-mosaic-gallery .gallery-img,
+  #proyecto .project-mosaic-gallery .gallery-img.tile-h,
+  #publicacion .publication-mosaic-gallery .gallery-img.tile-h,
+  #metafora .metafora-mosaic-gallery .gallery-img.tile-h {
+    grid-column: span 2;
   }
 }

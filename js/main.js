@@ -38,6 +38,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalNext = document.querySelector('.modal-next');
     let currentImageIndex = 0;
 
+    // Mosaicos: aplicar dos proporciones fijas segun orientacion real
+    const mosaicImages = document.querySelectorAll('.mosaic-grid .gallery-img');
+    const setMosaicTileClass = (img) => {
+        if (!img || !img.naturalWidth || !img.naturalHeight) {
+            return;
+        }
+
+        const ratio = img.naturalWidth / img.naturalHeight;
+        img.classList.remove('tile-h', 'tile-v');
+        if (ratio >= 1.1) {
+            img.classList.add('tile-h');
+        } else {
+            img.classList.add('tile-v');
+        }
+    };
+
+    if (mosaicImages.length > 0) {
+        mosaicImages.forEach((img) => {
+            if (img.complete) {
+                setMosaicTileClass(img);
+            } else {
+                img.addEventListener('load', () => setMosaicTileClass(img));
+            }
+        });
+    }
+
     if (galleryImages.length > 0 && modal) {
         // Abre el modal al hacer click en una imagen
         galleryImages.forEach((img, index) => {
