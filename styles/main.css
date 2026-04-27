@@ -398,8 +398,6 @@ a {
 }
 
 .video-ratio iframe {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   border: 0;
@@ -584,9 +582,17 @@ a {
 #metafora .metafora-panel-video .metafora-video-stage {
   width: 100%;
   max-width: none;
-  height: auto;
-  aspect-ratio: 16 / 9;
+  height: 0;
+  padding-bottom: 56.25%;
   margin-bottom: 1.25rem;
+}
+
+#metafora .metafora-panel-video .metafora-video-stage iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 #metafora .metafora-panel-album .metafora-album-layout {
@@ -818,11 +824,6 @@ a {
     padding-bottom: 8vh;
   }
 
-  #metafora .metafora-panel-video .metafora-video-stage {
-    height: auto;
-    padding-bottom: 0;
-  }
-
   #proyecto .project-mosaic-gallery .gallery-img,
   #publicacion .publication-mosaic-gallery .gallery-img,
   #metafora .metafora-mosaic-gallery .gallery-img {
@@ -902,11 +903,6 @@ a {
   #metafora .metafora-panel {
     min-height: auto;
     padding-bottom: 2.4rem;
-  }
-
-  #metafora .metafora-panel-video .metafora-video-stage {
-    height: auto;
-    padding-bottom: 0;
   }
 
   #proyecto .project-mosaic-gallery .gallery-img,
