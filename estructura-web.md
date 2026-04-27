@@ -87,6 +87,8 @@ Productora cultural. Participante y elenco.
 
 ## NADADORXS
 
+(Solo texto, no imágenes)
+
 Agradecemos enormemente a todxs los nadadorxs que participaron del concierto *Nada como una metáfora*: 
 
 Amanda Aravena Letelier, Ana Campos Canessa, Andrea Rojas Milla, Andrés González, Beatriz Martínez Améstica, Camila Torres Ceballos, Claudia Williamson, Estefanía Vilches, Ignacio Ruano Suárez, Irene Farías Valdés, Javier Ramírez Arenas, María José Bravo, Matilda Morales, Natalia Lam, Paloma Toro Canales, Ricardo Ramírez Lepe, Rocío Albornoz Marambio, Rodrigo Norambuena, Tamara Arenas Brito, Tamara Uribe Rojas, Yanniry Jaspe Sanguino.
@@ -129,9 +131,9 @@ En las sesiones mensuales presenciales, y en los encargos deportivos y sonoros r
 
 Las bitácoras operan entonces como un lugar de traducción. En ellas se ensaya el paso desde la escucha hacia la palabra escrita, y desde allí hacia una posible interpretación gráfica. Este tránsito —entre sonido, significante y forma visual— produce un desplazamiento continuo donde cada registro abre nuevas posibilidades de lectura. Más que fijar el sonido, la escritura lo despliega en múltiples direcciones.
 
-(Descargar publicación)
+(Botón a Descargar publicación -doc.pdf- placeholder)
 
-( cuadrilla de imágenes)
+(Mosaico de imágenes)
 
 # Contacto
 
