@@ -398,6 +398,8 @@ a {
 }
 
 .video-ratio iframe {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   border: 0;
@@ -582,7 +584,8 @@ a {
 #metafora .metafora-panel-video .metafora-video-stage {
   width: 100%;
   max-width: none;
-  height: min(72vh, calc(100vh - 240px));
+  height: auto;
+  aspect-ratio: 16 / 9;
   margin-bottom: 1.25rem;
 }
 
@@ -816,7 +819,8 @@ a {
   }
 
   #metafora .metafora-panel-video .metafora-video-stage {
-    height: min(64vh, calc(100vh - 220px));
+    height: auto;
+    padding-bottom: 0;
   }
 
   #proyecto .project-mosaic-gallery .gallery-img,
@@ -901,7 +905,8 @@ a {
   }
 
   #metafora .metafora-panel-video .metafora-video-stage {
-    height: min(56vh, calc(100vh - 190px));
+    height: auto;
+    padding-bottom: 0;
   }
 
   #proyecto .project-mosaic-gallery .gallery-img,
