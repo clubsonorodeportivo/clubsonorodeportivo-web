@@ -136,4 +136,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Video fallback: si el video de Vimeo no empieza en 8s, mostrar imagen estática
+    const vimeoIframe = document.getElementById('vimeo-bg');
+    const videoFallback = document.getElementById('video-fallback');
+    if (vimeoIframe && videoFallback && typeof Vimeo !== 'undefined') {
+        const player = new Vimeo.Player(vimeoIframe);
+        let videoStarted = false;
+        player.on('play', () => { videoStarted = true; });
+        setTimeout(() => {
+            if (!videoStarted) {
+                vimeoIframe.style.display = 'none';
+                videoFallback.style.display = 'block';
+            }
+        }, 8000);
+    }
 });

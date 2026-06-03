@@ -335,6 +335,15 @@ a {
   pointer-events: none;
 }
 
+#video-fallback {
+  display: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .video-bg-page .page-wrap,
 .video-bg-page .topbar {
   position: relative;
@@ -445,6 +454,53 @@ a {
 
 .image-container p {
   opacity: 0.85;
+}
+
+/* Participant cards con overlay hover */
+.participant-card {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+
+.participant-card .thumbnail {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.participant-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.participant-overlay h3,
+.participant-overlay p {
+  color: var(--color-background);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin: 0;
+}
+
+.participant-overlay h3 {
+  font-size: 16px;
+  margin-bottom: 0.25rem;
+}
+
+.participant-card:hover .participant-overlay {
+  background: rgba(143, 207, 243, 0.75);
+}
+
+.participant-card:hover .participant-overlay h3,
+.participant-card:hover .participant-overlay p {
+  opacity: 1;
 }
 
 .logo-th {
