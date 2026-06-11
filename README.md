@@ -1,4 +1,4 @@
-# clubsonorodeportivo-web
+# clubsonorodeportivo.github.io
 Página web del club sonoro deportivo
 
 ## Estructura
