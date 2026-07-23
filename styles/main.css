@@ -622,6 +622,10 @@ a {
   max-width: 960px;
 }
 
+#metafora > h1 {
+  scroll-snap-align: start;
+}
+
 #metafora .metafora-panel {
   min-height: 88vh;
   padding-bottom: 10vh;
@@ -658,7 +662,9 @@ a {
 }
 
 #metafora .metafora-panel-album .thumbnail {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
 }
 
 #metafora .metafora-panel-mosaic {
